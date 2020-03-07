@@ -1,0 +1,61 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <List [className]="'my-list'" [renderHeader]="renderHeader1">
+<!--          头像以及用户名-->
+          <ListItem multipleLine (onClick)="this.router.navigate(['/', 'user', 'self', 'userId'])">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="3">
+                  <ion-avatar></ion-avatar>
+                </ion-col>
+                <ion-col size="3" offset="6">
+                  Title
+                  <Brief>subtitle</Brief>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ListItem>
+
+          <ListItem>
+            <ion-grid>
+              <ion-row text-center>
+                <ion-col size="3" >
+                  <p>35</p>
+                  <label>文章</label>
+                </ion-col>
+                <ion-col size="3">
+                  <p>165</p>
+                  <label>关注</label>
+                </ion-col>
+                <ion-col size="3">
+                  <p>77345</p>
+                  <label>粉丝</label>
+                </ion-col>
+                <ion-col size="3"></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ListItem>
+        </List>
+
+        <List>
+          <ListItem
+                  [thumb]="'https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png'"
+                  [arrow]="'horizontal'"
+                  (onClick)="onClick()"
+          >
+            My wallet
+          </ListItem>
+        </List>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium" expand="block" (click)="logout()">退出登录</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

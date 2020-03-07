@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1<ion-icon name="thumbs-up-sharp"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row *ngFor="let passage of loadedPassages">
+      <ion-col>
+        <app-text-block [curPassage]="passage"></app-text-block>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
